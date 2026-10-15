@@ -1,0 +1,18 @@
+{
+  "sheet": "systems",
+  "columns": ["id", "name", "behavior", "content_policy", "runtime_evidence"],
+  "rows": [
+    {"id":"titus","name":"Titus","behavior":"Replace Cloud with real Titus geometry, voice and SM2 locomotion; Cloud animations only with Cloud weapons.","content_policy":"Read companion archives into memory; no copied content.","runtime_evidence":null},
+    {"id":"melee","name":"Melee combat","behavior":"Real-time SM2 melee combos and held chainsword attacks using Titus animations.","content_policy":"Read companion weapons and animations into memory.","runtime_evidence":null},
+    {"id":"ranged","name":"Ranged combat","behavior":"Bolter fire, magazine ammunition and reloads using the equipped ranged weapon.","content_policy":"Read companion weapons, animations and sounds into memory.","runtime_evidence":null},
+    {"id":"equipment","name":"Equipment menu","behavior":"Select melee weapon through FFVII weapon slot and ranged weapon through its accessory slot; preserve materia and upgrades.","content_policy":"Use host menu and save equipment IDs; no game-file replacement.","runtime_evidence":null},
+    {"id":"survival","name":"Armor and contested health","behavior":"Armor plates absorb damage; melee hits regain contested health before decay.","content_policy":"Original rules code with companion-derived tuning identified from installed content.","runtime_evidence":null},
+    {"id":"parry","name":"Parry and gun strike","behavior":"Perfect parry opens a point-blank gun strike.","content_policy":"Original combat integration with companion animations and sounds read in memory.","runtime_evidence":null},
+    {"id":"execution","name":"Executions","behavior":"Execute staggered enemies and recover armor.","content_policy":"Read companion execution animations and audio in memory.","runtime_evidence":null},
+    {"id":"grenades","name":"Grenades","behavior":"Frag and krak attacks from FFVII command menu.","content_policy":"Read companion visual and audio resources in memory.","runtime_evidence":null},
+    {"id":"fury","name":"Fury","behavior":"Titus Fury occupies Limit Break while preserving materia and party commands.","content_policy":"Read companion animations and audio in memory.","runtime_evidence":null},
+    {"id":"hud","name":"Hybrid HUD","behavior":"Show armor, health and ammunition alongside FFVII command menu.","content_policy":"Original UI code; no copied icons or textures.","runtime_evidence":null},
+    {"id":"emote","name":"Pour l’Empereur","behavior":"Play the actual SM2 For the Emperor gesture and voice together; cosmetic and cancellable.","content_policy":"ref:emotes.for_the_emperor","runtime_evidence":null},
+    {"id":"party","name":"Party and chapter compatibility","behavior":"Titus replaces Cloud by default; preserve prior Titus-only, Cloud-only and both choices, party switching and whole-game save compatibility.","content_policy":"Use host session and save data through its own APIs.","runtime_evidence":null}
+  ]
+}

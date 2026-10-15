@@ -1,0 +1,17 @@
+{
+  "sheet":"emotes",
+  "columns":["id","name","animation","audio_event","duration_s","input","cancel_on","combat_buff","animation_decode_evidence","audio_playback_evidence","in_game_evidence"],
+  "rows":[{
+    "id":"for_the_emperor",
+    "name":"Pour l’Empereur",
+    "animation":"animation/primaris/tacticus/special/emote/solo/tacticus_emote_solo_for_the_emperror_intercessor.sani",
+    "audio_event":"char_tacticus_emote_solo_for_the_emperror",
+    "duration_s":3.2,
+    "input":"Unassigned: choose an unused host action after reading the actual bindings; support AZERTY and controller.",
+    "cancel_on":["movement","attack","damage","menu","cutscene"],
+    "combat_buff":false,
+    "animation_decode_evidence":null,
+    "audio_playback_evidence":null,
+    "in_game_evidence":null
+  }]
+}
