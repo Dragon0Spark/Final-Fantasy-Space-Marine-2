@@ -1,0 +1,21 @@
+{
+  "sheet": "hud",
+  "description": "Battle HUD pieces. Titus's armour/health/ammo/Fury use Space Marine 2's own HUD art (converted from the player's SM2 copy into textures in the private pak); Remake's command menu, party switching and materia stay as they are.",
+  "columns": {
+    "id": "Row id.",
+    "sm2_art": "SM2 texture used (pct name) or null when drawn from plain shapes.",
+    "anchor": "Screen anchor.",
+    "position_px": "Offset at 1920x1080 (scaled with resolution).",
+    "size_px": "Size at 1920x1080.",
+    "shows": "What it shows.",
+    "visible_when": "When it is visible.",
+    "ff7r_route": "How it is drawn in FF7R.",
+    "verified": "true when seen correct in game."
+  },
+  "rows": [
+    {"id": "armor_plates", "sm2_art": "?to pick from SM2 ui textures", "anchor": "bottom-right above Remake's party panel", "position_px": [-420, -250], "size_px": [300, 18], "shows": "3 armour plates (filled / broken)", "visible_when": "In battle while Titus is in the party", "ff7r_route": "?UMG widget built at runtime (UImage per plate) from textures in the pak", "verified": "?"},
+    {"id": "health_bar", "sm2_art": "?to pick from SM2 ui textures", "anchor": "bottom-right", "position_px": [-420, -228], "size_px": [300, 10], "shows": "Titus HP with the contested part in white", "visible_when": "In battle while Titus is in the party", "ff7r_route": "?UMG progress bars (HP + contested overlay)", "verified": "?"},
+    {"id": "ammo", "sm2_art": "?to pick from SM2 ui textures", "anchor": "bottom-right", "position_px": [-110, -250], "size_px": [100, 32], "shows": "Gun name and rounds left in the clip", "visible_when": "In battle while Titus is the controlled character", "ff7r_route": "?UMG text", "verified": "?"},
+    {"id": "fury_glow", "sm2_art": "?to pick from SM2 ui textures", "anchor": "full screen", "position_px": [0, 0], "size_px": [1920, 1080], "shows": "Red edge glow while Fury is active", "visible_when": "Fury active", "ff7r_route": "?UMG image with alpha", "verified": "?"}
+  ]
+}

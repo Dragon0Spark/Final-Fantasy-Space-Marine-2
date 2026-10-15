@@ -1,0 +1,17 @@
+{
+  "sheet": "characters",
+  "description": "Who Titus replaces and how the Titus/Cloud setting behaves.",
+  "columns": {
+    "id": "Row id.",
+    "sm2_model": "SM2 template read from the player's copy.",
+    "replaces": "FF7R character slot.",
+    "ff7r_meshes": "ref:character_meshes rows replaced by this character.",
+    "scale_to_cloud": "How Titus's size is fitted onto Cloud's skeleton.",
+    "battle_kit": "ref:abilities rows this character uses in battle.",
+    "limit": "ref:abilities row used as Limit Break.",
+    "verified": "true when checked in game."
+  },
+  "rows": [
+    {"id": "titus", "sm2_model": "sm2:tpl/cc_titus.tpl/cc_titus.tpl", "replaces": "PC0000 Cloud", "ff7r_meshes": ["ref:character_meshes.cloud_standard"], "scale_to_cloud": "joints snapped to Cloud's bind pose, limbs rotated onto Cloud's segments, uniform height fit", "battle_kit": ["ref:abilities.chainsword_combo", "ref:abilities.parry_gun_strike", "ref:abilities.execution", "ref:abilities.bolter_fire", "ref:abilities.frag_grenade", "ref:abilities.krak_grenade"], "limit": "ref:abilities.fury", "verified": "?"}
+  ]
+}

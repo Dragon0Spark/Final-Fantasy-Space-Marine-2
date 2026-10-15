@@ -1,0 +1,27 @@
+{
+  "sheet": "weapons_melee",
+  "description": "Titus's weapon slot: each of Cloud's six swords becomes a Space Marine 2 melee weapon (model read from the player's SM2 copy, combat feel set here). Values are multipliers on Cloud's own numbers so Remake's balance and upgrades still apply.",
+  "columns": {
+    "id": "Row id.",
+    "ff7r_weapon": "Cloud's weapon (display name).",
+    "ff7r_item_id": "Equipment table row id of that weapon.",
+    "sm2_weapon": "SM2 weapon template whose model and sounds are used.",
+    "display_name": "Name shown in Remake's menus when Titus holds it.",
+    "description": "Menu description.",
+    "damage_mult": "Multiplier on the combo's physical damage.",
+    "stagger_mult": "Multiplier on stagger buildup.",
+    "speed": "Combo speed feel: fast / medium / slow.",
+    "special": "What makes it play differently.",
+    "swing_sound": "ref:audio_events row for swings.",
+    "hit_sound": "ref:audio_events row for hits.",
+    "verified": "true when tested in battle."
+  },
+  "rows": [
+    {"id": "chainsword", "ff7r_weapon": "Buster Sword", "ff7r_item_id": null, "sm2_weapon": "sm2:tpl/wpn_chainsword_01.tpl/wpn_chainsword_01.tpl", "display_name": "Chainsword", "description": "Astartes chainsword. Its teeth chew through armour: hits keep stagger climbing.", "damage_mult": 1.0, "stagger_mult": 1.25, "speed": "medium", "special": "Held attack revs the blade: continuous damage while the button is held.", "swing_sound": "ref:audio_events.chainsword_rev", "hit_sound": "ref:audio_events.chainsword_hit", "verified": "?"},
+    {"id": "power_sword", "ff7r_weapon": "Iron Blade", "ff7r_item_id": null, "sm2_weapon": "sm2:tpl/wpn_power_sword_01.tpl/wpn_power_sword_01.tpl", "display_name": "Power Sword", "description": "A disruption field cleaves anything it touches. High damage, quick recovery.", "damage_mult": 1.2, "stagger_mult": 1.0, "speed": "medium", "special": "Perfect parry window is longer.", "swing_sound": "ref:audio_events.power_swing", "hit_sound": "ref:audio_events.power_hit", "verified": "?"},
+    {"id": "thunder_hammer", "ff7r_weapon": "Nail Bat", "ff7r_item_id": null, "sm2_weapon": "sm2:tpl/wpn_thunder_hammer_01.tpl/wpn_thunder_hammer_01.tpl", "display_name": "Thunder Hammer", "description": "Every blow releases a thunderclap. Slow, crushing, staggers whole crowds.", "damage_mult": 1.45, "stagger_mult": 1.6, "speed": "slow", "special": "Heavy attacks shock nearby enemies.", "swing_sound": "ref:audio_events.hammer_swing", "hit_sound": "ref:audio_events.hammer_hit", "verified": "?"},
+    {"id": "power_fist", "ff7r_weapon": "Hardedge", "ff7r_item_id": null, "sm2_weapon": "sm2:tpl/wpn_power_fist_01.tpl/wpn_power_fist_01.tpl", "display_name": "Power Fist", "description": "A gauntlet that hits like a tank shell. Builds stagger fastest.", "damage_mult": 1.3, "stagger_mult": 1.8, "speed": "slow", "special": "Executions from the fist refill one extra armour plate.", "swing_sound": "ref:audio_events.power_swing", "hit_sound": "ref:audio_events.fist_hit", "verified": "?"},
+    {"id": "power_axe", "ff7r_weapon": "Mythril Saber", "ff7r_item_id": null, "sm2_weapon": "sm2:tpl/wpn_power_axe_01.tpl/wpn_power_axe_01.tpl", "display_name": "Power Axe", "description": "A blessed axe that channels the Emperor's will. Spells cast while it is held hit harder.", "damage_mult": 1.05, "stagger_mult": 1.1, "speed": "medium", "special": "Keeps the Mythril Saber's magic bonus.", "swing_sound": "ref:audio_events.power_swing", "hit_sound": "ref:audio_events.power_hit", "verified": "?"},
+    {"id": "combat_knife", "ff7r_weapon": "Twin Stinger", "ff7r_item_id": null, "sm2_weapon": "sm2:tpl/wpn_combat_knife_01.tpl/wpn_combat_knife_01.tpl", "display_name": "Combat Knife", "description": "Fast and vicious. Short combos, quick dodges, fastest Fury gain.", "damage_mult": 0.85, "stagger_mult": 0.9, "speed": "fast", "special": "Fury gauge fills 50% faster.", "swing_sound": "ref:audio_events.knife_swing", "hit_sound": "ref:audio_events.knife_hit", "verified": "?"}
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "sheet": "survival",
+  "description": "Space Marine 2 survival rules applied to Titus in Remake's battles. One row per tunable.",
+  "columns": {
+    "id": "Row id.",
+    "value": "Value.",
+    "unit": "Unit.",
+    "meaning": "What it does.",
+    "verified": "true when the feel was checked in battle."
+  },
+  "rows": [
+    {"id": "armor_plates", "value": 3, "unit": "plates", "meaning": "Armour plates soak damage before HP.", "verified": "?"},
+    {"id": "armor_per_plate_pct", "value": 12, "unit": "% of max HP", "meaning": "Damage one plate absorbs.", "verified": "?"},
+    {"id": "armor_regen_delay_s", "value": 0, "unit": "s", "meaning": "Plates do not regenerate on their own (SM2 rule): only executions and gun strikes refill.", "verified": "?"},
+    {"id": "execution_refill_plates", "value": 1, "unit": "plates", "meaning": "Plates refilled by an execution.", "verified": "?"},
+    {"id": "gun_strike_refill_plates", "value": 1, "unit": "plates", "meaning": "Plates refilled by a parry gun strike.", "verified": "?"},
+    {"id": "contested_window_s", "value": 4.0, "unit": "s", "meaning": "After taking HP damage, that amount is contested and decays after this window.", "verified": "?"},
+    {"id": "contested_decay_per_s", "value": 15, "unit": "% of contested", "meaning": "Decay speed once the window ends.", "verified": "?"},
+    {"id": "contested_regain_per_hit_pct", "value": 25, "unit": "% of damage dealt", "meaning": "HP won back from contested health per damage dealt.", "verified": "?"},
+    {"id": "fury_duration_s", "value": 20, "unit": "s", "meaning": "Fury length.", "verified": "?"},
+    {"id": "fury_damage_mult", "value": 1.5, "unit": "x", "meaning": "Damage multiplier during Fury.", "verified": "?"},
+    {"id": "fury_heal_per_hit_pct", "value": 2, "unit": "% of max HP", "meaning": "Heal per hit during Fury.", "verified": "?"}
+  ]
+}

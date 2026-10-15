@@ -1,0 +1,19 @@
+{
+  "sheet": "settings",
+  "description": "Player-facing settings, stored in the mashup's settings file (%LOCALAPPDATA%/SpaceMarineFFVII/settings.ini).",
+  "columns": {
+    "id": "Key in settings.ini.",
+    "default": "Default value.",
+    "values": "Allowed values.",
+    "meaning": "What it changes.",
+    "applies": "When a change takes effect.",
+    "verified": "true when tested."
+  },
+  "rows": [
+    {"id": "hero", "default": "titus", "values": ["titus", "cloud", "both"], "meaning": "titus = Titus replaces Cloud everywhere; cloud = vanilla Cloud (mod idle); both = Titus and Cloud fight together if Remake's party allows it", "applies": "?next launch (the pak is chosen at start)", "verified": "?"},
+    {"id": "voice_volume", "default": 1.0, "values": "0.0-1.0", "meaning": "Titus's voice lines volume", "applies": "immediately", "verified": "?"},
+    {"id": "sfx_volume", "default": 1.0, "values": "0.0-1.0", "meaning": "SM2 weapon sounds volume", "applies": "immediately", "verified": "?"},
+    {"id": "voice_language", "default": "english", "values": ["english", "french", "german", "spanish", "russian", "japanese", "chinese"], "meaning": "Which SM2 voice pak Titus's lines are read from", "applies": "next setup", "verified": "?"},
+    {"id": "hud", "default": "sm2", "values": ["sm2", "off"], "meaning": "Show Titus's SM2-style armour/health HUD", "applies": "immediately", "verified": "?"}
+  ]
+}

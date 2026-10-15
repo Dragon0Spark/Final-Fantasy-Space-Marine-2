@@ -1,0 +1,31 @@
+{
+  "sheet": "armor_sets",
+  "description": "Each Space Marine 2 texture set on Titus's LOD0 model becomes one FF7R material (a clone of one of Cloud's material instances) with its own converted textures. Textures are read from the player's SM2 paks at setup time.",
+  "columns": {
+    "id": "Row id; also names the FF7R assets: Material/SMT_<id>, Texture/SMT_<id>_<C|M|N|O|B|A>.",
+    "sm2_texture": "SM2 base texture name (layer0 texName in the tpl). Maps: <name> albedo, <name>_spec (R metal, G gloss, B AO), <name>_nm (DXN normal), <name>_a (alpha, optional).",
+    "template_material": "Cloud material instance cloned for this set (decides the FF7R shader).",
+    "alpha": "Coverage texture source when template uses EndMaterialInstance_Standard_Coverage, else null.",
+    "include": "true = converted and injected; false = left out of Titus (with the reason in note).",
+    "note": "Why this choice.",
+    "verified": "true once seen correct in game."
+  },
+  "rows": [
+    {"id": "body", "sm2_texture": "ch_titus_body_02", "template_material": "PC0000_00_BodyA", "alpha": "none", "include": true, "note": "Breastplate and torso armour.", "verified": "?"},
+    {"id": "undersuit", "sm2_texture": "ch_titus_undersuit_02", "template_material": "PC0000_00_BodyA", "alpha": "none", "include": true, "note": "Black bodyglove at joints.", "verified": "?"},
+    {"id": "arms", "sm2_texture": "ch_titus_arms_02", "template_material": "PC0000_00_BodyA", "alpha": "none", "include": true, "note": "Vambraces and gauntlets.", "verified": "?"},
+    {"id": "shoulders", "sm2_texture": "ch_titus_shoulders_02", "template_material": "PC0000_00_BodyA", "alpha": "none", "include": true, "note": "Pauldrons.", "verified": "?"},
+    {"id": "belt", "sm2_texture": "ch_titus_belt_02", "template_material": "PC0000_00_BodyB", "alpha": "none", "include": true, "note": "Belt, pouches, groin plate.", "verified": "?"},
+    {"id": "legs_a", "sm2_texture": "ch_titus_legs_02_a", "template_material": "PC0000_00_BodyB", "alpha": "none", "include": true, "note": "Greaves (part A).", "verified": "?"},
+    {"id": "legs_b", "sm2_texture": "ch_titus_legs_02_b", "template_material": "PC0000_00_BodyB", "alpha": "none", "include": true, "note": "Greaves (part B).", "verified": "?"},
+    {"id": "helmet", "sm2_texture": "ch_titus_helmet", "template_material": "PC0000_00_BodyA", "alpha": "none", "include": true, "note": "Helmet lenses and details.", "verified": "?"},
+    {"id": "helmet2", "sm2_texture": "ch_titus_helmet_02", "template_material": "PC0000_00_BodyA", "alpha": "none", "include": true, "note": "Helmet shell.", "verified": "?"},
+    {"id": "gorget", "sm2_texture": "ch_titus_body", "template_material": "PC0000_00_BodyA", "alpha": "none", "include": true, "note": "Small piece under the helmet.", "verified": "?"},
+    {"id": "jetpack", "sm2_texture": "ch_titus_jetpack_02", "template_material": "PC0000_00_BodyB", "alpha": "none", "include": true, "note": "Power-pack backpack.", "verified": "?"},
+    {"id": "seals", "sm2_texture": "ch_purity_seals_01", "template_material": "PC0000_00_BodyA", "alpha": "none", "include": true, "note": "Purity seals, need alpha cut-outs. No separate alpha map exists in SM2, so it renders opaque.", "verified": "?"},
+    {"id": "tabard", "sm2_texture": "ch_titus_tabard_02", "template_material": "PC0000_00_BodyA", "alpha": "none", "include": true, "note": "Cloth tabard front/back (static, no cloth sim in FF7R). No separate alpha map exists in SM2, so it renders opaque.", "verified": "?"},
+    {"id": "acc", "sm2_texture": "ch_titus_acc", "template_material": "PC0000_00_Bandage", "alpha": "ch_titus_acc_a", "include": true, "note": "Parchment stamps.", "verified": "?"},
+    {"id": "head_bare", "sm2_texture": "ch_titus_head", "template_material": "n/a", "alpha": "none", "include": false, "note": "Bare head is hidden under the helmet in SM2's helmeted outfit; Titus stays helmeted in Midgar.", "verified": true},
+    {"id": "preorder_pauldron", "sm2_texture": "ch_shoulder_crux_terminatus_pauldron_01", "template_material": "n/a", "alpha": "none", "include": false, "note": "Pre-order cosmetic pauldron (pre_order_shoulder_01), not part of Titus's story look.", "verified": true}
+  ]
+}

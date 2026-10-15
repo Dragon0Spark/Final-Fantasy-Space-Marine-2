@@ -74,3 +74,6 @@ complete release has passed review. No release was submitted.
   thread. It is not installed or run and implements no Titus gameplay yet.
 - Complete sheet preflight reports 16 unfinished cells and blocks the gameplay
   build. Nothing was packaged, uploaded, submitted, tested in game or published.
+- Historical authored scripts/sheets and journal are preserved under
+  Reference/PreviousProject with checksums. These are not active build inputs;
+  their extraction/cache-writing paths must not be executed for this project.

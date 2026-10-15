@@ -1,0 +1,18 @@
+{
+  "sheet": "character_meshes",
+  "description": "FF7R skeletal meshes of Cloud that receive Titus's geometry (written into the private ~mods pak at setup).",
+  "columns": {
+    "id": "Row id.",
+    "ff7r_asset": "Asset path inside the player's FF7R paks.",
+    "skeleton": "Skeleton asset it is bound to.",
+    "when_used": "Where the game uses it.",
+    "v1": "true = replaced in the first playable version.",
+    "verified": "true when Titus shows up there in game."
+  },
+  "rows": [
+    {"id": "cloud_standard", "ff7r_asset": "ff7r:End/Content/GameContents/Character/Player/PC0000_00_Cloud_Standard/Model/PC0000_00.uasset", "skeleton": "ff7r:End/Content/GameContents/Character/Player/PC0000_00_Cloud_Standard/Model/PC0000_00_Skeleton.uasset", "when_used": "Field, battle and real-time cutscenes in Cloud's usual outfit (all chapters except the Wall Market dress-up).", "v1": true, "verified": "?"},
+    {"id": "cloud_poor_dress", "ff7r_asset": "ff7r:End/Content/GameContents/Character/Player/PC0000_01_Cloud_PoorDress/Model/PC0000_01.uasset", "skeleton": null, "when_used": "Chapter 9 dress-up outfit.", "v1": false, "verified": "?"},
+    {"id": "cloud_ordinary_dress", "ff7r_asset": "ff7r:End/Content/GameContents/Character/Player/PC0000_02_Cloud_OrdinaryDress/Model/PC0000_02.uasset", "skeleton": null, "when_used": "Chapter 9 dress-up outfit.", "v1": false, "verified": "?"},
+    {"id": "cloud_gorgeous_dress", "ff7r_asset": "ff7r:End/Content/GameContents/Character/Player/PC0000_03_Cloud_GorgeousDress/Model/PC0000_03.uasset", "skeleton": null, "when_used": "Chapter 9 dress-up outfit.", "v1": false, "verified": "?"}
+  ]
+}

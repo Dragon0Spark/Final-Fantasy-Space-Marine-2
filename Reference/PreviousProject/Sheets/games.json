@@ -1,0 +1,19 @@
+{
+  "sheet": "games",
+  "description": "The games the mashup joins, their roles and what is read from each player's own copy.",
+  "columns": {
+    "id": "Row id.",
+    "melty_slug": "Melty game slug.",
+    "role": "primary (Melty installs into it and starts it) or companion (required, read from its folder).",
+    "store": "Store and app id on this PC.",
+    "version": "Build tested.",
+    "engine": "Engine and modding route.",
+    "reads": "What the mashup reads from the player's copy (never shipped).",
+    "anti_cheat": "Anti-cheat present and how the mashup stays clear of it.",
+    "verified": "true when checked."
+  },
+  "rows": [
+    {"id": "ff7r", "melty_slug": "final-fantasy-vii-remake", "role": "primary", "store": "Epic b25ba0f04dc9434f8a04a062719e7aa7", "version": "0212_0617_FF7R_FullPCMasterWin64", "engine": "Unreal 4.18 fork; UE4SS (bundled, MIT) + ~mods pak", "reads": "Cloud's model, skeleton, materials and textures (as templates); pak key from ff7remake_.exe; oo2core_7_win64.dll for Oodle", "anti_cheat": "none", "verified": true},
+    {"id": "sm2", "melty_slug": "custom-warhammer-40-000-space-marine-2", "role": "companion", "store": "Steam 2183900", "version": "?2026.9.16.0 (installed build, from Melty outcomes of other mashups)", "engine": "Swarm (Saber); zip paks, read offline only", "reads": "Titus model (cc_titus.tpl/.tpl_data), armour textures (pct/pct_mip), weapon models, voice and weapon sounds (Wwise), HUD art", "anti_cheat": "EasyAntiCheat: SM2 is never launched, patched or hooked; only its pak files are read", "verified": "?"}
+  ]
+}

@@ -1,0 +1,138 @@
+﻿[
+    {
+        "path":  "Tools/Pipeline/index_sm2_paks.py",
+        "sha256":  "d72af0afce562243255fbe62ddf9c96d9909afee88001fdc7b11be4e68e81957"
+    },
+    {
+        "path":  "Tools/Pipeline/ue4pak.py",
+        "sha256":  "1c6d0feda4cf99917b88b8163dd8bcb493e627e9b1702c1b9e5b3d04fdafbdb5"
+    },
+    {
+        "path":  "Tools/Pipeline/sm2tpl.py",
+        "sha256":  "bdaeb68dd9f7b0b00e471e632500e7c0f5e081e34004ef4849de264cc1b73f2b"
+    },
+    {
+        "path":  "Tools/Pipeline/blender_preview_obj.py",
+        "sha256":  "da7fa4013656438a8b85ff5121f9b90669a09a298592a07dc21c861804d13a6c"
+    },
+    {
+        "path":  "Tools/Pipeline/ff7rkey.py",
+        "sha256":  "d61f2809ef0850f7421dd94a03eaf12da1e325e2451e344a05c421009b560376"
+    },
+    {
+        "path":  "Tools/Pipeline/index_ff7r_paks.py",
+        "sha256":  "056295a280e6128f472a47cd4c4595d1de6410dbe189fcddcc8ba5c96bd0a0da"
+    },
+    {
+        "path":  "Tools/Pipeline/ff7rpaks.py",
+        "sha256":  "965c9d3971a5d63fcfc66d037623712cb4152ca8e8da324e5db35d7fbabb4f1b"
+    },
+    {
+        "path":  "Tools/Pipeline/sm2pct.py",
+        "sha256":  "0b4c90939b6431c2f34e52069f82b661c222f24ac19c7df8ce2dd25fc9fcfd50"
+    },
+    {
+        "path":  "Tools/Pipeline/ue4names.py",
+        "sha256":  "7402473089ccb9980a975cd727ef5f3191271c13f41b60d20b587c8a1e889ae5"
+    },
+    {
+        "path":  "Tools/Pipeline/preflight.py",
+        "sha256":  "369d3bde0b39becfb46f16e3e3e0b1316df8e085d727ca82511827628ebb9bc7"
+    },
+    {
+        "path":  "Tools/Pipeline/sheets.py",
+        "sha256":  "f7d74d472fe570ebfd79682de7b3dc1ebcd6fd2801209e7278dd534e8c0b7b54"
+    },
+    {
+        "path":  "Tools/Pipeline/titus_mesh.py",
+        "sha256":  "cec82d457127ba4072ca0497633f79a6d14d219993104e6dd5a1ea0b301a6a49"
+    },
+    {
+        "path":  "Tools/Pipeline/preview_fit.py",
+        "sha256":  "592ab0e78b2b8b8e13ec1968afd3dea9717773cc2f6476f314394e0a436f66a9"
+    },
+    {
+        "path":  "Tools/Pipeline/ff7rassets.py",
+        "sha256":  "fbbee195d2d03cdbd53ff78604ed23534d75b8760be7eee197ff96b55229e47d"
+    },
+    {
+        "path":  "Tools/Pipeline/build_titus.py",
+        "sha256":  "5dd34dccb2863afb8f7630d731ed4adce0052968307d87945a5d1f050f6e546e"
+    },
+    {
+        "path":  "Tools/Pipeline/sm2audio.py",
+        "sha256":  "56e2d7ef0017d0459b48402a401a18abe6748defcdbf34451fe00b34971fcc9a"
+    },
+    {
+        "path":  "Tools/Pipeline/sm2anim.py",
+        "sha256":  "7e70a3f1008d71ff2ed97b74ea30686be804b144f9cd9455d6ce47b9ed358f98"
+    },
+    {
+        "path":  "Tools/Pipeline/preview_anim.py",
+        "sha256":  "9d719ff014bd6df93d1177c3c4529912e3cd611bce5aab26c5e7f6aa41243f7c"
+    },
+    {
+        "path":  "Tools/Pipeline/blender_preview_frames.py",
+        "sha256":  "fc73f87d161804bb1a836938129857705d28649ddfa1c1527865c56bd56ea602"
+    },
+    {
+        "path":  "Sheets/bone_map.json",
+        "sha256":  "4fc32dea674444ba140199c7f619bcb2be346a1ddaaa2e084e82dfd0b9050bf9"
+    },
+    {
+        "path":  "Sheets/armor_sets.json",
+        "sha256":  "fb3cf80f75a16e6e82a9edb875187cffc2b8b22c4cc5d76b785efbe2eab16cdf"
+    },
+    {
+        "path":  "Sheets/games.json",
+        "sha256":  "cb5115c4f6922a9875cf3bb588eed8acafcaac3592233a04a61e5dc21ed1b645"
+    },
+    {
+        "path":  "Sheets/characters.json",
+        "sha256":  "d74f200548566e0511e265f6e9c83794ec276f045ca381498473d5c84b9a262e"
+    },
+    {
+        "path":  "Sheets/character_meshes.json",
+        "sha256":  "62c3bac085384692d6fef434fe34558c1381ed984b5a1d5dad6a7e5b1640a21e"
+    },
+    {
+        "path":  "Sheets/weapons_melee.json",
+        "sha256":  "a4950dd6f86bbaef2322ecc39579206c93255e143b760b1227d5102802262d78"
+    },
+    {
+        "path":  "Sheets/weapons_ranged.json",
+        "sha256":  "41954dff34ee32b931c46e248700b38ff72b5628796ffda352a52ae95f4ef232"
+    },
+    {
+        "path":  "Sheets/abilities.json",
+        "sha256":  "7675f00732a54a6637a86d9e5d66ea5cfeb37e0f90711ccc7ebdd121db6999c5"
+    },
+    {
+        "path":  "Sheets/survival.json",
+        "sha256":  "c7caa5859cda7528f29ec2c77694dfe9f4bb82ee04c56ec0717725245db14ada"
+    },
+    {
+        "path":  "Sheets/audio_events.json",
+        "sha256":  "0c0613407b068c3b2ef7fc461ebdc4b0d21dd17f1f264a09dc3014998a91f8ee"
+    },
+    {
+        "path":  "Sheets/hud.json",
+        "sha256":  "3f750093aa5581b4d848ff443f9bbaf526ba4f6df4c08e04e026b85fcd4cf182"
+    },
+    {
+        "path":  "Sheets/hooks.json",
+        "sha256":  "ebb7f684a613730c9bc54d7fc6141924c95156f081978cceda45f0d9fe155cd4"
+    },
+    {
+        "path":  "Sheets/settings.json",
+        "sha256":  "a0bc037f194c489742f530e6b28bcd1526dcdfe59a4c34c33172249172963045"
+    },
+    {
+        "path":  "Sheets/pipeline_steps.json",
+        "sha256":  "8501708493bf3e6def7abf20a2d5da84dd1a647ea5a297149257f2e17c739ec6"
+    },
+    {
+        "path":  "Sheets/titus_parts.json",
+        "sha256":  "413b3c52110cb3a6874faf5755515e02f10dd4a5bbd39f92288d6409fcb57fbc"
+    }
+]

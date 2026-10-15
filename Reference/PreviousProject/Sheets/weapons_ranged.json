@@ -1,0 +1,25 @@
+{
+  "sheet": "weapons_ranged",
+  "description": "Titus's accessory slot is his gun slot. Each accessory family equipped on Titus selects a Space Marine 2 gun; with no accessory he carries his bolt pistol. The accessory's own Remake effect still applies.",
+  "columns": {
+    "id": "Row id.",
+    "ff7r_accessories": "Accessory item ids that select this gun (empty list = default when no accessory).",
+    "sm2_weapon": "SM2 weapon template (model + sounds).",
+    "display_name": "Gun name shown with the accessory's name in menus.",
+    "damage": "Damage per shot as a % of Titus's attack (Remake's damage formula input).",
+    "fire_rate": "Shots per second while the fire button is held.",
+    "clip": "Shots before a reload.",
+    "reload_s": "Reload time in seconds.",
+    "stagger": "Stagger added per hit (Remake units).",
+    "ff7r_damage_source": "Existing FF7R damage source spawned per shot (projectile + hit effect).",
+    "fire_sound": "ref:audio_events row.",
+    "verified": "true when tested in battle."
+  },
+  "rows": [
+    {"id": "bolt_pistol", "ff7r_accessories": "none (default gun)", "sm2_weapon": "sm2:tpl/wpn_bolt_pistol_01.tpl/wpn_bolt_pistol_01.tpl", "display_name": "Bolt Pistol", "damage": 18, "fire_rate": 3.0, "clip": 10, "reload_s": 1.4, "stagger": 1.0, "ff7r_damage_source": null, "fire_sound": "ref:audio_events.bolt_pistol_fire", "verified": "?"},
+    {"id": "bolt_rifle", "ff7r_accessories": null, "sm2_weapon": "sm2:tpl/wpn_bolt_rifle_01.tpl/wpn_bolt_rifle_01.tpl", "display_name": "Bolt Rifle", "damage": 22, "fire_rate": 5.0, "clip": 20, "reload_s": 1.8, "stagger": 1.2, "ff7r_damage_source": null, "fire_sound": "ref:audio_events.bolt_rifle_fire", "verified": "?"},
+    {"id": "heavy_bolter", "ff7r_accessories": null, "sm2_weapon": "sm2:tpl/wpn_bolter_heavy_01.tpl/wpn_bolter_heavy_01.tpl", "display_name": "Heavy Bolter", "damage": 26, "fire_rate": 8.0, "clip": 60, "reload_s": 3.0, "stagger": 1.5, "ff7r_damage_source": null, "fire_sound": "ref:audio_events.heavy_bolter_fire", "verified": "?"},
+    {"id": "plasma_incinerator", "ff7r_accessories": null, "sm2_weapon": "sm2:tpl/wpn_plasma_rifle_01.tpl/wpn_plasma_rifle_01.tpl", "display_name": "Plasma Incinerator", "damage": 45, "fire_rate": 2.0, "clip": 12, "reload_s": 2.2, "stagger": 3.0, "ff7r_damage_source": null, "fire_sound": "ref:audio_events.plasma_fire", "verified": "?"},
+    {"id": "melta_rifle", "ff7r_accessories": null, "sm2_weapon": "sm2:tpl/wpn_melta_rifle_01.tpl/wpn_melta_rifle_01.tpl", "display_name": "Melta Rifle", "damage": 90, "fire_rate": 0.8, "clip": 6, "reload_s": 2.6, "stagger": 6.0, "ff7r_damage_source": null, "fire_sound": "ref:audio_events.melta_fire", "verified": "?"}
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "sheet": "titus_parts",
+  "description": "Objects of Titus's SM2 template (cc_titus.tpl, LOD0) and whether each one goes into his FF7R mesh.",
+  "columns": {
+    "id": "SM2 object name (LOD0).",
+    "include": "true = converted into the FF7R mesh.",
+    "note": "What it is / why it is left out.",
+    "verified": "true when seen in game."
+  },
+  "rows": [
+    {"id": "titus_torso_01", "include": true, "note": "Breastplate, abdomen, undersuit.", "verified": "?"},
+    {"id": "titus_legs_01", "include": true, "note": "Greaves, belt, purity seals on the legs.", "verified": "?"},
+    {"id": "titus_sholder_armor_R_01", "include": true, "note": "Right pauldron with seals.", "verified": "?"},
+    {"id": "titus_sholder_armor_L_01", "include": true, "note": "Left pauldron.", "verified": "?"},
+    {"id": "helmet_01", "include": true, "note": "Mk X helmet.", "verified": "?"},
+    {"id": "titus_hand_R_01", "include": true, "note": "Right arm and gauntlet (with chains).", "verified": "?"},
+    {"id": "titus_hand_L_01", "include": true, "note": "Left arm and gauntlet.", "verified": "?"},
+    {"id": "backpack", "include": true, "note": "Power pack.", "verified": "?"},
+    {"id": "tbrd_01_frnt_REND", "include": true, "note": "Tabard front (render mesh).", "verified": "?"},
+    {"id": "tbrd_01_bck_REND", "include": true, "note": "Tabard back (render mesh).", "verified": "?"},
+    {"id": "stamp_R_01_REND", "include": true, "note": "Parchment stamp.", "verified": "?"},
+    {"id": "stamp_R_02_REND", "include": true, "note": "Parchment stamp.", "verified": "?"},
+    {"id": "stamp_R_03_REND", "include": true, "note": "Parchment stamp.", "verified": "?"},
+    {"id": "cloth_stamp_leg", "include": true, "note": "Parchment stamp on the leg.", "verified": "?"},
+    {"id": "head_01", "include": false, "note": "Bare head (helmet off); Titus stays helmeted.", "verified": true},
+    {"id": "pre_order_shoulder_01", "include": false, "note": "Pre-order cosmetic pauldron.", "verified": true},
+    {"id": "tbrd_01_frnt_SIM_02", "include": false, "note": "Cloth simulation proxy, never rendered.", "verified": true},
+    {"id": "tbrd_01_bck_SIM_02", "include": false, "note": "Cloth simulation proxy, never rendered.", "verified": true}
+  ]
+}

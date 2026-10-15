@@ -1,0 +1,25 @@
+{
+  "sheet": "abilities",
+  "description": "Titus's battle actions and how each one is made inside Remake's battle system (input, trigger, effect, sounds).",
+  "columns": {
+    "id": "Row id.",
+    "name": "Name shown to the player.",
+    "input": "How the player triggers it (Remake's default PC/pad bindings).",
+    "condition": "When it is available.",
+    "effect": "What it does, in game terms.",
+    "cost": "ATB / armour / Fury cost.",
+    "ff7r_route": "How it is built in FF7R (native ability reused, damage source spawned, status applied...).",
+    "sounds": "ref:audio_events rows.",
+    "hud": "ref:hud rows it updates.",
+    "verified": "true when tested in battle."
+  },
+  "rows": [
+    {"id": "chainsword_combo", "name": "Melee combo", "input": "Attack (Remake's Attack button)", "condition": "Always", "effect": "Remake's real-time combo with the equipped SM2 melee weapon's damage/stagger multipliers; each hit wins back contested health.", "cost": "none", "ff7r_route": "?Cloud's native combo kept; damage scaled via OnGiveDamage-driven bonus damage source", "sounds": ["ref:audio_events.chainsword_rev", "ref:audio_events.chainsword_hit"], "hud": ["ref:hud.health_bar"], "verified": "?"},
+    {"id": "parry_gun_strike", "name": "Parry → Gun Strike", "input": "Guard just before an enemy hit lands", "condition": "Perfect guard window", "effect": "Perfect parry negates the hit, then Titus fires his gun point-blank into the attacker for heavy stagger.", "cost": "none", "ff7r_route": "?Remake's just-guard (OnGiveDamage InJustGuard / Punisher counter) + spawned gun damage source on the attacker", "sounds": ["ref:audio_events.parry", "ref:audio_events.gun_strike"], "hud": "n/a", "verified": "?"},
+    {"id": "execution", "name": "Execution", "input": "Attack + Guard together near a staggered enemy", "condition": "Target is staggered (Remake 'Burst')", "effect": "Brutal finisher dealing big damage and refilling one armour plate (two with the Power Fist). Titus's battle cry plays.", "cost": "none", "ff7r_route": "?IsBurst on target, spawned high-damage source, armour refill in survival logic", "sounds": ["ref:audio_events.execution", "ref:audio_events.titus_execution_line_1", "ref:audio_events.titus_execution_line_2", "ref:audio_events.titus_execution_line_3"], "hud": ["ref:hud.armor_plates"], "verified": "?"},
+    {"id": "bolter_fire", "name": "Fire gun", "input": "Hold the ranged button (Remake's ability/Shift slot, rebound for Titus)", "condition": "Clip not empty", "effect": "Fires the equipped SM2 gun at the locked target at its fire rate; reload when empty.", "cost": "ammo (clip)", "ff7r_route": "?CreateDamageSource with an existing FF7R projectile id and overridden damage", "sounds": ["ref:audio_events.bolt_pistol_fire"], "hud": ["ref:hud.ammo"], "verified": "?"},
+    {"id": "frag_grenade", "name": "Frag Grenade", "input": "Command menu → Abilities", "condition": "1 ATB bar", "effect": "Area blast, knocks down groups.", "cost": "1 ATB", "ff7r_route": "?command menu entry reusing an existing ability slot; explosion damage source", "sounds": ["ref:audio_events.grenade_throw", "ref:audio_events.frag_explode"], "hud": "n/a", "verified": "?"},
+    {"id": "krak_grenade", "name": "Krak Grenade", "input": "Command menu → Abilities", "condition": "1 ATB bar", "effect": "Single-target armour-piercing blast, big stagger.", "cost": "1 ATB", "ff7r_route": "?command menu entry reusing an existing ability slot; explosion damage source", "sounds": ["ref:audio_events.grenade_throw", "ref:audio_events.krak_explode"], "hud": "n/a", "verified": "?"},
+    {"id": "fury", "name": "Fury (Fureur)", "input": "Limit menu when the Limit gauge is full", "condition": "Limit gauge full", "effect": "For 20 s Titus hits 50% harder, every hit heals and contested health never decays; ends with a roar.", "cost": "Limit gauge", "ff7r_route": "?Cloud's Limit Break entry renamed; on activation apply attack-up + regen via survival logic", "sounds": ["ref:audio_events.fury_start", "ref:audio_events.titus_fury_line_1", "ref:audio_events.titus_fury_line_2", "ref:audio_events.fury_end"], "hud": ["ref:hud.fury_glow"], "verified": "?"}
+  ]
+}

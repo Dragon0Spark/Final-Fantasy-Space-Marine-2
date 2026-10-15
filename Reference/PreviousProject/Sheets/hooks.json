@@ -1,0 +1,24 @@
+{
+  "sheet": "hooks",
+  "description": "Every place the runtime mod touches Remake (UE4SS Lua). Each row is a hook or a call; status says whether it was proven in the running game.",
+  "columns": {
+    "id": "Row id.",
+    "kind": "hook (RegisterHook post-callback), call (UFunction we call), read (property we read), poll (checked every tick).",
+    "target": "Full UE path of the function / property.",
+    "purpose": "What the mashup uses it for.",
+    "used_by": "ref:abilities / ref:survival / ref:hud / ref:audio_events rows.",
+    "status": "proven / untested / failed (with why).",
+    "verified": "true when proven in game."
+  },
+  "rows": [
+    {"id": "ai_take_damage", "kind": "hook", "target": "/Script/EndGame.EndBattleAIController:OnTakeDamage", "purpose": "Damage received by any battle character (armour absorption for Titus, hit sounds)", "used_by": ["ref:survival.armor_plates"], "status": "untested", "verified": "?"},
+    {"id": "ai_give_damage", "kind": "hook", "target": "/Script/EndGame.EndBattleAIController:OnGiveDamage", "purpose": "Damage dealt (contested health regain, Fury heal, just-guard detection)", "used_by": ["ref:survival.contested_regain_per_hit_pct", "ref:abilities.parry_gun_strike"], "status": "untested", "verified": "?"},
+    {"id": "scene_take_damage", "kind": "hook", "target": "/Script/EndGame.EndBattleSceneBlueprint:OnTakeDamage", "purpose": "Scene-wide damage event with causer/damaged names (fallback if controller hooks don't fire for the player)", "used_by": ["ref:survival.armor_plates"], "status": "untested", "verified": "?"},
+    {"id": "burst_begin", "kind": "hook", "target": "/Script/EndGame.EndBattleAIController:OnBurstBegin", "purpose": "Enemy staggered → execution available", "used_by": ["ref:abilities.execution"], "status": "untested", "verified": "?"},
+    {"id": "create_damage_source", "kind": "call", "target": "/Script/EndGame.EndBattleAIController:CreateDamageSource", "purpose": "Spawn a native FF7R damage source (projectile/explosion) with overridden damage for gun shots, gun strike, grenades, execution", "used_by": ["ref:abilities.bolter_fire", "ref:abilities.frag_grenade", "ref:abilities.krak_grenade", "ref:abilities.execution"], "status": "untested", "verified": "?"},
+    {"id": "get_hp", "kind": "call", "target": "/Script/EndGame.EndBattleAIController:GetHP", "purpose": "Read HP of battle characters", "used_by": ["ref:hud.health_bar"], "status": "untested", "verified": "?"},
+    {"id": "set_player_hp", "kind": "call", "target": "/Script/EndGame.EndMenuBPAPI:BPSetPlayerHP", "purpose": "Give back absorbed / contested HP to Titus", "used_by": ["ref:survival.armor_plates", "ref:survival.contested_regain_per_hit_pct"], "status": "untested", "verified": "?"},
+    {"id": "get_player_hp", "kind": "call", "target": "/Script/EndGame.EndMenuBPAPI:BPGetPlayerHP", "purpose": "Read Titus HP for the HUD and survival logic", "used_by": ["ref:hud.health_bar"], "status": "untested", "verified": "?"},
+    {"id": "player_limit", "kind": "call", "target": "/Script/EndGame.EndMenuBPAPI:BPGetPlayerLimit", "purpose": "Detect when the Limit gauge empties (Fury activated)", "used_by": ["ref:abilities.fury"], "status": "untested", "verified": "?"}
+  ]
+}

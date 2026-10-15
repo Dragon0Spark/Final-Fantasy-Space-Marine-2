@@ -1,0 +1,26 @@
+{
+  "sheet": "pipeline_steps",
+  "description": "What the setup step (run by Melty before the first Play) does on the player's PC. Inputs are the player's own game files; outputs stay on their PC.",
+  "columns": {
+    "id": "Row id.",
+    "reads": "Inputs from the player's games.",
+    "writes": "Outputs (private, on the player's PC).",
+    "tool": "Module in Tools/Pipeline (shipped as the converter).",
+    "depends_on": "ref:pipeline_steps rows that must run first.",
+    "status": "working / partial / todo.",
+    "verified": "true when its output was checked (preview or in game)."
+  },
+  "rows": [
+    {"id": "find_games", "reads": "Melty settings (game folders)", "writes": "paths in memory", "tool": "setup_main.py", "depends_on": "n/a", "status": "todo", "verified": "?"},
+    {"id": "ff7r_key", "reads": "FF7R End/Binaries/Win64/ff7remake_.exe, pak index", "writes": "key in memory only", "tool": "ff7rkey.py", "depends_on": ["ref:pipeline_steps.find_games"], "status": "working", "verified": true},
+    {"id": "ff7r_read", "reads": "ff7r paks (Cloud model, skeleton, materials, textures); Oodle from Engine/Binaries/ThirdParty/Oodle", "writes": "assets in memory", "tool": "ff7rpaks.py, ue4pak.py", "depends_on": ["ref:pipeline_steps.ff7r_key"], "status": "working", "verified": true},
+    {"id": "sm2_model", "reads": "SM2 tpl/cc_titus.tpl/*", "writes": "Titus mesh in memory", "tool": "sm2tpl.py", "depends_on": ["ref:pipeline_steps.find_games"], "status": "working", "verified": true},
+    {"id": "retarget", "reads": "Titus mesh, Cloud skeleton, Sheets/bone_map.json", "writes": "Titus geometry skinned to Cloud's bones", "tool": "titus_mesh.py", "depends_on": ["ref:pipeline_steps.sm2_model", "ref:pipeline_steps.ff7r_read"], "status": "working", "verified": "?"},
+    {"id": "textures", "reads": "sm2 pct/pct_mip per Sheets/armor_sets.json", "writes": "SMT_* texture assets", "tool": "sm2pct.py, texconv (MIT, bundled)", "depends_on": ["ref:pipeline_steps.ff7r_read"], "status": "working", "verified": "?"},
+    {"id": "materials", "reads": "Cloud material instances (templates)", "writes": "SMT_* material instance assets", "tool": "ff7rassets.py (Cloud MI cloned, .uexp kept, names rehashed)", "depends_on": ["ref:pipeline_steps.textures"], "status": "working", "verified": "?"},
+    {"id": "inject_mesh", "reads": "Cloud PC0000_00 mesh, retargeted geometry, SMT materials", "writes": "PC0000_00.uasset/.uexp (Titus)", "tool": "bua (MIT, bundled)", "depends_on": ["ref:pipeline_steps.retarget", "ref:pipeline_steps.materials"], "status": "working", "verified": "?"},
+    {"id": "audio", "reads": "sm2 sound banks + voice external sources, Sheets/audio_events.json", "writes": "%LOCALAPPDATA%/SpaceMarineFFVII/audio/*.wav", "tool": "sm2audio.py (events resolve via FNV-1 + HIRC; playback route: SEAD SAB with PCM, todo)", "depends_on": ["ref:pipeline_steps.find_games"], "status": "partial", "verified": "?"},
+    {"id": "pak", "reads": "all converted assets", "writes": "FF7R End/Content/Paks/~mods/SpaceMarineFFVII_Titus_P.pak", "tool": "ue4pak.py", "depends_on": ["ref:pipeline_steps.inject_mesh"], "status": "working", "verified": "?"},
+    {"id": "done_marker", "reads": "-", "writes": "%LOCALAPPDATA%/SpaceMarineFFVII/setup_done.txt (Melty's setup.done file)", "tool": "setup_main.py", "depends_on": ["ref:pipeline_steps.pak", "ref:pipeline_steps.audio"], "status": "todo", "verified": "?"}
+  ]
+}
