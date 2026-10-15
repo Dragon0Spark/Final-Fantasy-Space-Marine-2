@@ -14,6 +14,9 @@ equipment switching and the emote. The full design also retains armor, contested
 health, parries, gun strikes, executions, grenades and Fury.
 
 No new runtime combat, mesh, emote or one-click installation has been proven.
+The donor-proportion math now passes offline checks, including 10,240 actual
+source vertices. A live diagnostics attempt crashed the legacy UE4SS setup;
+that hot injection route is retired. See `Docs/Investigation.md` for evidence.
 The earlier mesh prototype and converted game files are not a release artifact.
 License and permission to remix original project code are awaiting the creator.
 

@@ -21,3 +21,5 @@ Tools/External/
 *.tpl
 *.tpl_data
 *.dmp
+shots/
+clips/

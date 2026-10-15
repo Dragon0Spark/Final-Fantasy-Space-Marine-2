@@ -1,0 +1,9 @@
+{
+  "sheet":"proportions",
+  "columns":["id","rule","unit_scale","position_source","verification"],
+  "rows":[
+    {"id":"native_skeleton","rule":"Preserve donor bone lengths and shoulder width instead of snapping joints to Cloud.","unit_scale":1.0,"position_source":"SM2 global bind matrices converted metres to centimetres, anchored at host root.","verification":"Offline: 188 donor bones recompose to the source bind pose; max error below 1e-7. Rotation/scale/hierarchy regression checks pass. Host display remains unverified."},
+    {"id":"bind_skinning","rule":"Bind-pose skinning must reproduce the original donor geometry after unit conversion.","unit_scale":1.0,"position_source":"In-memory SM2 vertex and bone data.","verification":"Offline: 10240 actual donor vertices checked in memory, max error below 1e-6 cm. No game content written. Live corrected mesh remains unverified."},
+    {"id":"live_mesh","rule":"Verify torso, shoulders, arms, hands and legs in the actual host game.","unit_scale":1.0,"position_source":"Running FFVII viewport, without restarting the user-owned session.","verification":null}
+  ]
+}

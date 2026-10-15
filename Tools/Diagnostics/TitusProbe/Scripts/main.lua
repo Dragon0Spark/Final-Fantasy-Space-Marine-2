@@ -5,6 +5,8 @@ local Probe = {
     PollCount = 0,
     Pending = false,
     Hooked = {},
+    EnableCombatHooks = false,
+    EnableEquipmentRead = false,
 }
 
 function Probe:Log(message)
@@ -62,13 +64,16 @@ end
 
 function Probe:Poll()
     self.PollCount = self.PollCount + 1
-    self:RegisterCombatHooks()
+    -- Startup-only probe: duplicate hooks and complex struct calls stay disabled.
+    if self.EnableCombatHooks then self:RegisterCombatHooks() end
     local api = StaticFindObject("/Script/EndGame.Default__EndMenuBPAPI")
     if not api or not api:IsValid() then return end
     local ok, hp = pcall(function() return api:BPGetPlayerHP(0) end)
     if not ok or type(hp) ~= "number" or hp <= 0 then return end
-    self:ReadEquipment(api, 0, "weapon")
-    self:ReadEquipment(api, 2, "accessory")
+    if self.EnableEquipmentRead then
+        self:ReadEquipment(api, 0, "weapon")
+        self:ReadEquipment(api, 2, "accessory")
+    end
     if self.PollCount % 10 == 0 then
         self:Log("host state readable; hp=" .. tostring(hp) .. "; mashup gameplay unverified")
     end
@@ -87,4 +92,4 @@ LoopAsync(1000, function()
     return false
 end)
 
-Probe:Log("read-only diagnostics loaded; no gameplay features implemented here")
+Probe:Log("startup-only HP diagnostics loaded; equipment reads and new hooks disabled")

@@ -1,0 +1,24 @@
+{
+  "sheet":"host_memory",
+  "columns":["id","binary_sha256","offsets","interpretation","runtime_evidence"],
+  "rows":[{
+    "id":"ff7_epic_0212",
+    "binary_sha256":"64137c36d0937e6b381019830cd6c55b4c038473eb7dbf1166f86f4ffd8345c0",
+    "offsets":{
+      "manager_global_rva":92145384,
+      "health_root":748928,
+      "health_slots":15968,
+      "health_player_stride":64,
+      "health_value":48,
+      "equipment_manager":748936,
+      "equipment_slots_pointer":8,
+      "equipment_slots":8112,
+      "equipment_player_stride":32,
+      "equipment_weapon":0,
+      "equipment_armor":4,
+      "equipment_accessory":8
+    },
+    "interpretation":"Static decompilation-derived layout. Equipment values identify saved slots, not resolved item names. Read only; never write through these offsets.",
+    "runtime_evidence":null
+  }]
+}

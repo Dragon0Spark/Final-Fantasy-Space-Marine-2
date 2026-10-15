@@ -11,10 +11,11 @@ The sheet preflight currently fails on 16 unfinished cells. This is an expected
 release/build block, not a successful gameplay test. Do not replace those cells
 with success text without obtaining the corresponding evidence.
 
-The prepared host probe is read-only, source-only and not installed. A future
-probe run must observe both a real combat and an equipment change in the native
-FFVII menu. Registering a callback is not evidence that it fired or controls
-gameplay. Neither observation would prove Titus animation or combat integration.
+The initial host probe was loaded into the already-running legacy session and
+the game crashed. No combat or equipment change was verified by it. The revised
+source disables its complex equipment call and new hooks; a separate external
+query/read-only observer is pending live validation. Registering a callback is
+not evidence that it fired or controls gameplay. See `Investigation.md`.
 
 The metadata-only Melty recipe check is exploratory. A real packaged release
 still needs full file inspection, recipe validation, one-click installation,

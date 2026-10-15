@@ -25,7 +25,9 @@
 - The old arm/chest deformation, animation decoding and combat integration are
   unresolved. Do not claim the earlier prototype as the new playable build.
 - Existing SDK is useful evidence about reflected signatures, not runtime proof.
-- No game was running when inspected. Launch and input permission are pending.
+- The user later authorized input control on their already-running game. The hot
+  diagnostic crashed that session; no restart was attempted. A new launch needs
+  authorization.
 - MIT/remix choice asked asynchronously; publishing is pending the answer.
 
 ## Architecture boundary
@@ -69,11 +71,31 @@ complete release has passed review. No release was submitted.
   `BPGetCurrentEquipment(PlayerType, EquipType)` returning EndDataTableEquipment,
   with UniqueID and UniqueIndex. Category 0 is Weapon, 2 is Accessory, player 0
   is Cloud. These are historical signatures to verify at runtime.
-- Prepared an original read-only diagnostics script under Tools/Diagnostics.
-  It observes combat events and polls equipment through host APIs on the game
-  thread. It is not installed or run and implements no Titus gameplay yet.
+- Prepared original diagnostics under Tools/Diagnostics. The initial version
+  was loaded in memory, then crashed the legacy loader; the revised source keeps
+  complex equipment reads and new hooks off. It implements no Titus gameplay.
 - Complete sheet preflight reports 16 unfinished cells and blocks the gameplay
   build. Nothing was packaged, uploaded, submitted, tested in game or published.
 - Historical authored scripts/sheets and journal are preserved under
   Reference/PreviousProject with checksums. These are not active build inputs;
   their extraction/cache-writing paths must not be executed for this project.
+
+## 2026-10-15 live inspection, proportions and requested decompilation
+
+- User authorized game/input control, said FFVII was already running, requested
+  corrected Titus proportions, then explicitly requested both games be decompiled
+  to transfer their gameplay faithfully.
+- Used the existing PID 32588 and its returned window; no new game was started.
+  Baseline screenshot: shots/titus-before-back.png (old prototype, no release media).
+- Proportions audit/new pose solver and six mathematical regressions pass; real
+  donor content stayed in RAM. See Docs/Investigation.md. Live correction pending.
+- Ghidra 12.1.4 installed under LOCALAPPDATA/CodexTools, official checksum matched.
+  Used existing Android Studio JBR 21. Native Ghidra CLI recovered focused FFVII
+  and SM2 functions; all pseudocode/databases stay outside tracked release files.
+- Live Lua diagnostic loaded through an existing loader API, then FFVII crashed.
+  User notified immediately when detected. Dump reports UE4SS.dll fail-fast
+  0xc0000409/2 at offset 0xc99945. Root cause unconfirmed; hot injection retired.
+- No game/loader files or old project files changed. Game is no longer running;
+  no restart attempted. Need fresh launch authorization for any new game run.
+- New external state reader is query/read-only and build-hash-gated. Runtime
+  validation is pending; do not claim it fixed gameplay or verified equipment.
